@@ -1,0 +1,274 @@
+        /* Base styling */
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .a11y-toolbar {
+            font-size: 16px; /* Lock font size */
+            padding: 12px 24px; /* Lock padding */
+        }
+        .a11y-toolbar .a11y-button {
+            padding: 8px; /* Lock padding */
+        }
+        .a11y-toolbar .a11y-button svg {
+            width: 24px; /* Lock icon size */
+            height: 24px; /* Lock icon size */
+        }
+
+
+        body.high-contrast {
+            background-color: #121212; /* Dark gray, not pure black */
+            color: #e0e0e0; /* Off-white, not pure white */
+        }
+
+        body.high-contrast .a11y-toolbar {
+            background-color: #1f1f1f;
+            border-bottom: 1px solid #333;
+        }
+
+        body.high-contrast .a11y-toolbar .text-lg {
+             color: #e0e0e0;
+        }
+
+        body.high-contrast .a11y-button svg {
+            fill: #e0e0e0;
+        }
+        
+        body.high-contrast .a11y-button:hover {
+            background-color: #333;
+        }
+
+        body.high-contrast .form-container {
+            background-color: #1f1f1f; /* Slightly lighter card background */
+            border: 1px solid #333; /* Softer border */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+        }
+
+        body.high-contrast .form-title,
+        body.high-contrast .form-description {
+            color: #ffffff;
+        }
+        
+        body.high-contrast header {
+            border-bottom-color: #333;
+        }
+
+        /* Dark mode inputs */
+        body.high-contrast input[type="text"],
+        body.high-contrast input[type="email"],
+        body.high-contrast textarea,
+        body.high-contrast input[type="radio"] {
+            background-color: #2a2a2a; /* Dark input background */
+            color: #e0e0e0;
+            border-color: #444; /* Softer input border */
+        }
+        
+        body.high-contrast input[type="text"]:focus,
+        body.high-contrast input[type="email"]:focus,
+        body.high-contrast textarea:focus {
+            border-color: #3b82f6; /* Blue accent */
+            ring-color: #3b82f6;
+        }
+
+        body.high-contrast input[type="radio"]:checked {
+            background-color: #3b82f6; /* Blue accent for checked */
+            border-color: #3b82f6;
+        }
+        
+        body.high-contrast input[type="radio"]:focus {
+            ring-color: #3b82f6;
+        }
+
+        body.high-contrast label,
+        body.high-contrast legend {
+            color: #e0e0e0;
+        }
+
+        /* Dark mode buttons */
+        body.high-contrast .speak-button svg {
+            fill: #9ca3af; /* Softer icon color */
+        }
+        
+        body.high-contrast .speak-button:hover {
+            background-color: #333;
+        }
+        
+        body.high-contrast .submit-button {
+            background-color: #3b82f6; /* Blue accent */
+            color: #ffffff;
+        }
+        
+        body.high-contrast .submit-button:hover {
+            background-color: #2563eb;
+        }
+
+        /* Dark mode error messages */
+        body.high-contrast .error-message {
+            color: #ffb8b8; /* Lighter red */
+            background-color: #2d1a1a; /* Dark red background */
+            border-color: #8b2828; /* Dark red border */
+        }
+        
+        body.high-contrast .nav-button {
+            background-color: #1f1f1f;
+            border: 2px solid #333;
+        }
+        body.high-contrast .nav-button svg {
+            fill: #e0e0e0;
+        }
+        body.high-contrast .nav-button:hover {
+            background-color: #333;
+        }
+        body.high-contrast .nav-button:disabled {
+            background-color: #2a2a2a;
+            border-color: #444;
+            opacity: 0.6;
+        }
+        body.high-contrast .nav-button:disabled svg {
+            fill: #555;
+        }
+        
+        body.high-contrast .progress-bar-container {
+            background-color: #333;
+            border: 1px solid #444;
+        }
+        body.high-contrast .progress-bar-inner {
+            background-color: #3b82f6;
+        }
+        body.high-contrast .nav-counter {
+            color: #e0e0e0;
+        }
+        
+         body.high-contrast .toast-message {
+            background-color: #1f1f1f;
+            border: 2px solid #333;
+            color: #e0e0e0;
+        }
+        body.high-contrast .toast-message svg {
+            fill: #e0e0e0;
+        }
+        
+        body.high-contrast .message-box {
+            background-color: #1f1f1f;
+            border: 2px solid #333;
+            color: #e0e0e0;
+        }
+        
+        body.high-contrast .message-box-close {
+            color: #9ca3af;
+        }
+        
+        body.high-contrast .question-block.active {
+            background-color: #2a2a2a; 
+            border-left-color: #3b82f6;
+        }
+
+
+        .error-message {
+            display: none;
+            padding: 0.75rem 1rem;
+            margin-top: 0.5rem;
+            border: 1px solid #e53e3e;
+            background-color: #fed7d7;
+            color: #c53030;
+            font-weight: 500;
+            border-radius: 0.5rem;
+        }
+
+        .message-box-overlay {
+            display: none; 
+            position: fixed;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 50;
+            align-items: center;
+            justify-content: center;
+        }
+        .message-box {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            max-width: 400px;
+            width: 90%;
+            transition: background-color 0.3s, color 0.3s, border 0.3s;
+            border: 1px solid #e2e8f0;
+        }
+        .message-box-close {
+            float: right;
+            font-size: 1.5rem;
+            font-weight: bold;
+            line-height: 1;
+            cursor: pointer;
+            color: #9ca3af;
+        }
+
+        .nav-button {
+            transition: background-color 0.3s, border 0.3s;
+        }
+        .nav-button svg {
+            transition: fill 0.3s;
+        }
+        
+        .nav-counter {
+            transition: color 0.3s;
+        }
+
+        .progress-bar-container {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 9999px;
+            overflow: hidden;
+            transition: background-color 0.3s, border 0.3s;
+            border: 1px solid #e0e0e0;
+        }
+        .progress-bar-inner {
+            height: 0.75rem; 
+            background-color: #3b82f6;
+            border-radius: 9999px;
+            transition: width 0.4s ease-in-out, background-color 0.3s;
+            width: 0%; 
+        }
+        
+        .toast-message {
+            position: fixed;
+            bottom: -100px; 
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            z-index: 100;
+            transition: bottom 0.5s ease-in-out, background-color 0.3s, color 0.3s, border 0.3s;
+            border: 1px solid transparent;
+        }
+        .toast-message.show {
+            bottom: 2rem; 
+        }
+        
+        .question-block {
+            border-radius: 0.75rem; 
+            margin-left: -1rem; 
+            margin-right: -1rem; 
+            padding-right: 1rem;
+            padding-top: 0.5rem; 
+            padding-bottom: 0.5rem; 
+            
+            border-left: 4px solid transparent;
+            padding-left: calc(1rem - 4px);
+            
+            transition-property: background-color, border-color;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 300ms;
+        }
+        .question-block.active {
+            background-color: #f7f7f7; 
+            border-left-color: #3b82f6; 
+        }
+        
